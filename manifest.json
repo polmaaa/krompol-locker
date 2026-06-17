@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Krompol Locker v.0.1",
+  "version": "0.1",
+  "description": "Mengamankan aktivitas browser Chrome Anda dengan proteksi kata sandi.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "webNavigation"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "chrome_url_overrides": {
+    "newtab": "lock.html"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

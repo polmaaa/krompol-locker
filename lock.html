@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krompol Locker v.0.1</title>
+  <link rel="stylesheet" href="lock.css">
+</head>
+<body>
+  <!-- Ambient Pastel Gradient Background -->
+  <div class="bg-gradient">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Unlocked Top Bar -->
+  <div id="unlocked-top-bar" class="top-bar">
+    <button id="lock-btn" class="btn-lock" title="Kunci Browser">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-lock-icon">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+      </svg>
+      Kunci Browser
+    </button>
+  </div>
+
+  <div class="container">
+    <!-- Massive Full Screen Clock & Date -->
+    <div class="clock-container">
+      <h1 id="clock">00:00:00</h1>
+      <p id="date">Hari, Tanggal Bulan Tahun</p>
+    </div>
+
+    <!-- Redesigned Lock Card: Sleek Horizontal Lock Pill (Locked State Only) -->
+    <div id="lock-card" class="lock-pill-container">
+      <form id="lock-form" class="lock-pill-form" onsubmit="return false;">
+        <div class="lock-icon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lock-pill-icon">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <input type="password" id="password-input" placeholder="Masukkan kata sandi..." required autocomplete="off">
+        <button type="button" id="toggle-password" title="Tampilkan Kata Sandi">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="eye-icon" id="eye-icon">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+        </button>
+        <button type="submit" class="btn-pill-submit" title="Buka Kunci">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </form>
+      <div id="error-message" class="error-msg">Sandi salah. Silakan coba lagi!</div>
+    </div>
+
+    <!-- Simple Search Bar (Unlocked State Only) -->
+    <div id="search-section" class="search-container">
+      <form id="search-form" onsubmit="return false;">
+        <div class="search-group">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="search-input" placeholder="Cari di Google..." autocomplete="off">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="lock.js"></script>
+</body>
+</html>
